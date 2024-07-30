@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lista de Livros</title>
+    <style>
+        footer {
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+        <h1>Lista de Livros</h1>
+        <button class="btn" onclick="location.href='/curriculo'">Ver Currículo</button>
+        <button class="btn" onclick="location.href='/'">Voltar a Home</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Categoria</th>
+                    <th>Ano de Publicação</th>
+                    <th>Ativo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for livro in livros %}
+                    <tr>
+                        <td>{{ livro['Titulo do Livro'] }}</td>
+                        <td>{{ livro['Autor'] }}</td>
+                        <td>{{ livro['Categoria'] }}</td>
+                        <td>{{ livro['Ano de Publicação'] }}</td>
+                        <td>{{ livro['Ativo'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>
